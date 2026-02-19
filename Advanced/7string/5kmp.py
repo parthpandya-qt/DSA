@@ -1,0 +1,36 @@
+def longestSuffixPrefix(txt):
+    lps=[]*len(txt)
+    lps[0]=0
+    i=1
+    ln=0
+    n=len(txt)
+    while i<n:
+        if txt[i]==txt[ln]:
+            ln+=1
+            lps[i]=ln
+            i+=1
+        else:
+            if ln==0:
+                lps[i]=0
+                i+=1
+            else:
+                ln=lps[ln-1]
+
+def kmpSearch(strs,pat):
+    n,m=len(strs),len(pat)
+    lps=longestSuffixPrefix(pat)
+    i,j=0,0
+    res=[]
+    while i<n:
+        if strs[i]==pat[j]:
+            i+=1
+            j+=1
+        if j==m:
+            res.append(i-j)
+            j=lps[j-1]
+        elif i<n and strs[i]!=pat[j]:
+            if j!=0:
+                j=lps[j-1]
+            else:
+                i+=1
+    return res
