@@ -23,4 +23,4 @@ def febonacci(n):
             a,b=b,a+b
             arr.append(b)
         return arr
-print(febonacci(10))         
+print(febonacci(9))         

@@ -5,3 +5,6 @@ def subArray(arr,n):
         maxElement=max(arr[i],arr[i]+maxElement)
         res=max(maxElement,res)
     return res    
+
+
+
