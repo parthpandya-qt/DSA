@@ -5,3 +5,6 @@ def subset(string,curr,ind):
     subset(string,curr,ind+1)
     subset(string,curr+string[ind],ind+1)
 subset("abc", "", 0)
+
+
+

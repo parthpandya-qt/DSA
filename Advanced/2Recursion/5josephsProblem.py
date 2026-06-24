@@ -4,5 +4,4 @@ def jes(n,k):
     else:
         return (jes(n-1,k)+k)%n
     
-
 print(jes(29,3))
