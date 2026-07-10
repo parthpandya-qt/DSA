@@ -9,6 +9,3 @@ def subArraygivenSum(arr,Sum):
         if curr==Sum:
             return True
     return False
- 
-
-      

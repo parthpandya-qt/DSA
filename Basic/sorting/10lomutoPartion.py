@@ -12,3 +12,11 @@ arr = [10, 80, 30, 90, 40, 50, 70]
 p = lomuto(arr, 0, len(arr) - 1)
 print("Partition index:", p)
 print("Array after partition:", arr)
+
+
+
+# The Lomuto partition is a partitioning method used in Quick Sort. It chooses the last element as the pivot and rearranges the array so that:
+
+# All elements less than or equal to the pivot are on the left.
+# All elements greater than the pivot are on the right.
+# The pivot ends up in its correct sorted position.

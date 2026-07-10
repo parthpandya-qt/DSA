@@ -10,3 +10,7 @@ def bubbleSort(l):
             break
     return l
 print(bubbleSort([23,54,2,34,32,1,23,43]))                
+
+
+
+
