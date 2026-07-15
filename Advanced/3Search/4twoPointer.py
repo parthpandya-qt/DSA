@@ -1,11 +1,15 @@
-def isSum(arr,x):
-    low=0
-    high=len(arr)-1
-    while low<high:
-        if arr[low]+arr[high]==x:
+def isSum(arr, x):
+    low = 0
+    high = len(arr) - 1
+
+    while low < high:
+        curr_sum = arr[low] + arr[high]
+
+        if curr_sum == x:
             return True
-        elif arr[low]+arr[high]>x:
-            j-=1
+        elif curr_sum > x:
+            high -= 1
         else:
-            i+=1
+            low += 1
+
     return False
