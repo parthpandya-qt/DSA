@@ -3,9 +3,6 @@ class Node:
         self.key=key
         self.next=None
 
-
-
-
 head=None
 def insertBegi(head,key):
     temp=Node(key)

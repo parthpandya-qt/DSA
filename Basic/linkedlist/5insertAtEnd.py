@@ -23,9 +23,6 @@ head=insertEnd(head,10)
 head=insertEnd(head,20)
 head=insertEnd(head,30)
 head=insertEnd(head,40)
-
-
-
 printList(head)
 
         

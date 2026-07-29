@@ -5,3 +5,11 @@ def factorial(n):
     else:
         return n*factorial(n-1)
 print(factorial(10))
+
+
+
+def Sum(n):
+    if n == 0:
+        return 0
+    return n+Sum(n-1)
+print(Sum(100))

@@ -40,5 +40,4 @@ def reverse(head):
         curr = next_node
     return prev
 
-
 display(reverse(head))   
