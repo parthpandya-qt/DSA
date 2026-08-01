@@ -38,7 +38,7 @@ def removeduplicatesorted(head):
 
 def display(head):
     curr=head
-    while curr!=None:
+    while curr!=None:    
         print(curr.key,end="->")
         curr=curr.next
 removeduplicatesorted(head)

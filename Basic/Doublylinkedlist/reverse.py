@@ -25,7 +25,7 @@ def reverse(head):
     while curr!=None:
         new_head=curr
         curr.next,curr.prev=curr.prev,curr.next
-        curr=curr.prev
+        curr=curr.next
     return new_head
 head=reverse(head)    
 

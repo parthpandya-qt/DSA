@@ -23,7 +23,9 @@ def deleteTail(head):
     curr=head
     while curr.next.next!=None:
         curr=curr.next
-    curr.next=None
+    last_node = curr.next
+    curr.next = None
+    last_node.prev = None
     
     return head    
         
