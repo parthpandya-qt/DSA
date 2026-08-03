@@ -1,31 +1,51 @@
-def infixPostfix(exp):
-    hashMap={
-        '+':1,
-        '-':1,
-        '*':2,
-        '/':2,
-        '^':3}
-    stack=[]
-    result=[]
+def infixToPostfix(exp):
+
+    precedence = {
+        '+': 1,
+        '-': 1,
+        '*': 2,
+        '/': 2,
+        '^': 3
+    }
+
+    stack = []
+    result = []
+
     for ch in exp:
+
+        # Operand
         if ch.isalnum():
             result.append(ch)
-        elif ch=='(':
+
+        # Left parenthesis
+        elif ch == '(':
             stack.append(ch)
-        elif ch==')':
-            while stack and stack[-1]!='(':
+
+        # Right parenthesis
+        elif ch == ')':
+
+            while stack and stack[-1] != '(':
                 result.append(stack.pop())
-            stack.pop()
+
+            stack.pop()      # Remove '('
+
+        # Operator
         else:
-            while stack and stack[-1]!='(' and hashMap[ch]<=hashMap[stack[-1]]and ch!='^':
+
+            while (stack and
+                   stack[-1] != '(' and
+                   (precedence[stack[-1]] > precedence[ch] or
+                    (precedence[stack[-1]] == precedence[ch] and ch != '^'))):
+
                 result.append(stack.pop())
+
             stack.append(ch)
+
+    # Pop remaining operators
     while stack:
         result.append(stack.pop())
-    return ''.join(result)
-    
-         
 
+    return ''.join(result)
 
 
 
