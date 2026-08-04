@@ -49,3 +49,46 @@ print(q.isEmpty())      # True
 print(q.dequeue())      # None 
 
                 
+
+
+
+
+
+
+
+
+
+
+
+
+# class Node:
+#     def __init__(self,data):
+#         self.data = data
+#         self.next = None
+
+# class queue:
+#     def __init__(self):
+#         self.front = None
+#         self.rear = None
+#         self.size = 0
+#     def enqueue(self, data):
+#         node = Node(data)
+
+#         if self.rear is None:
+#             self.front = node
+#             self.rear = node
+#         else:
+#             self.rear.next = node
+#             self.rear = node
+
+#         self.size += 1
+#     def dequeue(self):
+#         if self.front == None:
+#             return None
+#         else:
+#             temp = self.front.data
+#             self.front = self.front.next
+#             if self.front == None:
+#                 self.rear = None
+#         return temp
+        
