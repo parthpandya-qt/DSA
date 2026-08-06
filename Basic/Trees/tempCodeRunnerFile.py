@@ -1,1 +1,0 @@
-print(self.data,end =" ")

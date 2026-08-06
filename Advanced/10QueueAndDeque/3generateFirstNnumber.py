@@ -1,6 +1,6 @@
 from collections import deque
 
-def gernerate(n):
+def generate(n):
     
     q=deque()
     q.append('5')
@@ -10,4 +10,6 @@ def gernerate(n):
         print(curr,end=' ')
         q.append(curr+'5')
         q.append(curr+'6')
+
+generate(10)
 

@@ -9,7 +9,7 @@ def levelTraversal(root):
         curr=q.popleft()
         res.append(curr.data)
         if curr.left!=None:
-            q.append(root.left)
+            q.append(curr.left)
         if curr.right!=None:
-            q.append(root.right)
+            q.append(curr.right)
 

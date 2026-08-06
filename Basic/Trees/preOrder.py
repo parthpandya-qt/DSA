@@ -3,14 +3,13 @@ class Node:
         self.left=None
         self.right=None
         self.data=data
-    def inOrder(self):
+    def preOrder(self):
         
-        if self.left:
-            self.left.inOrder()
         print(self.data,end =" ")
+        if self.left:
+            self.left.preOrder()
         if self.right:
-            self.right.inOrder()
-                
+            self.right.preOrder()
 
 root=Node(10)
 root.left=Node(20)
@@ -18,12 +17,5 @@ root.right=Node(30)
 root.right.left=Node(40)
 root.right.right=Node(50)
 
-root.inOrder()  
+root.preOrder()  
 
-root=Node(10)
-root.left=Node(20)
-root.right=Node(30)
-root.right.left=Node(40)
-root.right.right=Node(50)
-
-root.inOrder()
