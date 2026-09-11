@@ -11,4 +11,4 @@ def lowerBound(arr,x):
         else:
             high=mid-1
     return res        
-print(lowerBound([1,2,3,4,5,5,5,5,5,5,5,5,5,54,54,54],53))
+print(lowerBound([1,2,3,4,5,5,5,5,5,5,5,5,5,54,54,54],5))

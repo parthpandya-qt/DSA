@@ -5,16 +5,11 @@ def searchInfinite(arr, x):
     while arr[high] < x:
         low = high
         high = high * 2
-
-  
-
     return binarySearch(arr, low, high, x)
-
 
 def binarySearch(arr, low, high, x):
     while low <= high:
         mid = (low + high) // 2
-
         if arr[mid] == x:
             return mid
         elif arr[mid] < x:
