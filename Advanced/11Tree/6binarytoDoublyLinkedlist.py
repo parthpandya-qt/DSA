@@ -6,7 +6,7 @@ def conversion(root):
     global head
     if root==None:
         return 
-    conversion(root.left)
+    head= conversion(root.left)
     
     if prev==None:
         head=root

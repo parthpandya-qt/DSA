@@ -8,10 +8,10 @@ class Node:
 def Max(root):
     if root==None:
         return float('-inf')
-    else:
-        lh=Max(root.left)
-        rh=Max(root.right)
-        return max(root.data,lh,rh)
+    
+    lh=Max(root.left)
+    rh=Max(root.right)
+    return max(root.data,lh,rh)
 
     
 

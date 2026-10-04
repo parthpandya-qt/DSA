@@ -1,9 +1,3 @@
-class Node:
-    def __init__(self,data):
-        self.left=None
-        self.right=None
-        self.data=data
-    
     
 def nodeAtkposition(root,k):
     if root==None:
@@ -20,4 +14,3 @@ root.right.left=Node(40)
 root.right.right=Node(50)
 
 nodeAtkposition(root,2)
-
