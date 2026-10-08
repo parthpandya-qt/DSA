@@ -93,12 +93,12 @@ def buildTree(self, preorder, inorder):
 
         mid = self.map[root.val]
 
-        root.left = build(left, mid - 1)
         root.right = build(mid + 1, right)
+        root.left = build(left, mid - 1)
 
         return root
 
     return build(0, len(inorder) - 1)
 
 
-
+    

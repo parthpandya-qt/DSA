@@ -1,24 +1,33 @@
 class Node:
-    def __init__(self,data):
-        self.data=data
-        self.right=None
-        self.left=None
+    def __init__(self, data):
+        self.data = data
+        self.left = None
+        self.right = None
 
-def insert(root,key):
-    parant=None
-    curr=root
-    while curr!=None:
-        parant=curr
-        if curr.data==key:
+
+def insert(root, key):
+    parent = None
+    curr = root
+
+    while curr is not None:
+        parent = curr
+
+        if curr.data == key:
             return root
-        if curr.data<key:
-            curr=curr.right
-        
+
+        if key < curr.data:
+            curr = curr.left
         else:
-            curr=curr.left
-    if parant==None:
+            curr = curr.right
+
+    # Tree is empty
+    if parent is None:
         return Node(key)
-    if parant.data>key:
-        parant.left=Node(key)
-    if parant.data<key:
-        parant.right=Node(key)    
+
+    # Insert the new node
+    if key < parent.data:
+        parent.left = Node(key)
+    else:
+        parent.right = Node(key)
+
+    return root
